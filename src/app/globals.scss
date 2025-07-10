@@ -1,0 +1,42 @@
+$primary-color: #4f46e5;
+$primary-dark-color: #6a61d4;
+$text-color: #333;
+$error-color: #ef4444;
+$border-color: #d1d5db;
+$background-color: #f9fafb;
+
+// *,
+// *::before,
+// *::after {
+//   box-sizing: border-box;
+//   margin: 0;
+//   padding: 0;
+// }
+
+@font-face {
+  font-family: "IranYekan";
+  src: url("/fonts/Yekan.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  ascent-override: 90%;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "IranYekan", "Inter", sans-serif;
+  color: $text-color;
+  background-color: $background-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  html,
+  body {
+    padding: 1rem;
+  }
+}

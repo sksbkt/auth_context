@@ -1,0 +1,79 @@
+@import "../globals.scss";
+@import "../../components/button.module.scss";
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem;
+  background-color: $background-color;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  color: $primary-color;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.description {
+  font-size: 1.2rem;
+  color: $text-color;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  line-height: 1.5;
+  p {
+    display: inline;
+  }
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.authLink {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: $primary-color;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+
+  &:hover {
+    background-color: $primary-dark-color;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  @media (max-width: 768px) {
+    width: 80%;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+.logoutButton {
+  @extend .button;
+  background-color: #dc2626;
+  &:hover {
+    background-color: #b91c1c;
+  }
+}

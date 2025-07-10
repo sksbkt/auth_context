@@ -1,0 +1,31 @@
+@import "../../app/globals.scss";
+@import "../../components/button.module.scss";
+.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem;
+  background-color: $background-color;
+  text-align: center;
+
+  .welcomeMessage {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: $primary-color;
+
+    @media (max-width: 768px) {
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+.logoutButton {
+  @extend .button;
+  background-color: #dc2626;
+  &:hover {
+    background-color: #b91c1c;
+  }
+}
